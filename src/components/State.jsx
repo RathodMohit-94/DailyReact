@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect , useRef} from "react";
 
 const State = () => {
   const [count, setCount] = useState(0);
@@ -8,6 +8,12 @@ const State = () => {
   // useEffect(() => {
   //     alert("Clicked " +a+ " Times,HOOORRRAAAYYY...");
   // }, [count]);
+  const a = useRef(0);
+
+  useEffect(() => {
+    a.current = a.current + 1;
+    console.log(`rerendaring ${a.current}`);
+  });
 
   
   return (

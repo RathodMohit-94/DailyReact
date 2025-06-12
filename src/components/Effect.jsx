@@ -5,16 +5,6 @@ const Effect = () => {
 
   useEffect(() => {
     alert('This is an example of useEffect...');
-    // Example side effect: Setting a timer (for demonstration)
-    // const timer = setTimeout(() => {
-    //   alert('Timer triggered after 2 seconds');
-    // }, 2000);
-
-    // Cleanup function
-    // return () => {
-    //   clearTimeout(timer); // Clean up timer
-    //   alert('Cleanup: Timer cleared');
-    // };
   }, [click]); // Effect runs when `click` changes
 
   const handleClick = () => {
