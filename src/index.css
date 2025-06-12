@@ -1,0 +1,156 @@
+/* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        /* Base styles for State container */
+        .State {
+            margin: 0 auto;
+            padding: clamp(10px, 3vw, 20px);
+            width: clamp(300px, 90vw, 600px); /* Responsive width */
+            min-height: clamp(200px, 40vh, 400px); /* Responsive height */
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: bisque;
+            border-radius: 8px;
+            gap: 15px;
+        }
+
+        /* Heading styles */
+        .Stateh1 {
+            text-align: center;
+            color: aliceblue;
+            background-color: rgb(56, 33, 33);
+            border: 1px solid black;
+            border-radius: 4px;
+            width: clamp(150px, 50%, 300px);
+            padding: clamp(8px, 2vw, 12px);
+            font-size: clamp(1.2rem, 3vw, 2rem);
+        }
+
+        /* State1 container styles */
+        .State1 {
+            border: 2px solid black;
+            border-radius: 8px;
+            width: clamp(250px, 80%, 500px);
+            height: 30vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: clamp(10px, 2vw, 15px);
+            background-color: cornsilk;
+            color: black;
+            gap: 10px;
+            flex-wrap: wrap; /* Allow wrapping for better responsiveness */
+        }
+
+        /* Paragraph styles */
+        p {
+            border: 1px solid black;
+            padding: clamp(5px, 1.5vw, 8px);
+            font-weight: bold;
+            font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+            flex: 1;
+            text-align: center;
+        }
+
+        /* Button styles */
+        button {
+            font-weight: 500;
+            font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+            text-align: center;
+            color: #ffffff;
+            background-color: #000000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 18px);
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #ffffff;
+            color: #000000;
+            transform: scale(1.05);
+        }
+
+        /* Media query for smaller screens (e.g., mobile devices) */
+        @media (max-width: 768px) {
+            .State {
+                width: 95vw;
+                min-height: clamp(250px, 50vh, 350px);
+                padding: 15px;
+            }
+
+            .Stateh1 {
+                font-size: clamp(1rem, 4vw, 1.5rem);
+                padding: 8px;
+            }
+
+            .State1 {
+                flex-direction: column;
+                padding: 10px;
+                gap: 8px;
+            }
+
+            button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+
+        /* Media query for very small screens (e.g., narrow mobile devices) */
+        @media (max-width: 480px) {
+            .State {
+                width: 100vw;
+                min-height: clamp(200px, 45vh, 300px);
+                padding: 10px;
+            }
+
+            .Stateh1 {
+                font-size: clamp(0.9rem, 4.5vw, 1.2rem);
+                padding: 6px;
+            }
+
+            .State1 {
+                padding: 8px;
+            }
+
+            button {
+                font-size: clamp(0.7rem, 3.5vw, 0.9rem);
+                padding: clamp(6px, 2vw, 10px) clamp(10px, 3vw, 15px);
+            }
+        }
+
+        /* Media query for larger screens (e.g., desktops) */
+        @media (min-width: 1200px) {
+            .State {
+                width: clamp(500px, 50vw, 700px);
+                min-height: clamp(350px, 45vh, 500px);
+            }
+
+            .Stateh1 {
+                font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+            }
+
+            .State1 {
+                width: clamp(400px, 70%, 600px);
+            }
+        }
